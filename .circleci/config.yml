@@ -33,6 +33,9 @@ jobs:
           command: |
             npm run backend:build
   deploy:
+    docker:
+      # the base image can run most needed actions with orbs
+      - image: 'cimg/base:stable'
     application-name:
       default: 'reactnd-contacts-server'
     steps:
